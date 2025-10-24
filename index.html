@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sudoku — Juego en JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" role="application" aria-label="Sudoku game">
+    <header>
+      <h1>Sudoku</h1>
+      <div class="controls">
+        <select id="difficulty" title="Dificultad">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="newBtn" class="btn">New</button>
+        <button id="solveBtn" class="btn ghost">Solve</button>
+        <button id="clearBtn" class="btn ghost">Clear</button>
+      </div>
+    </header>
+
+    <section class="board-wrap">
+      <div id="board" class="board" aria-hidden="false"></div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="panel">
+        <h3>Keypad</h3>
+        <div class="keypad" id="keypad">
+          <button class="key">1</button><button class="key">2</button><button class="key">3</button>
+          <button class="key">4</button><button class="key">5</button><button class="key">6</button>
+          <button class="key">7</button><button class="key">8</button><button class="key">9</button>
+        </div>
+        <div class="row" style="margin-top:8px">
+          <label><input id="pencil" type="checkbox"> Anotar</label>
+          <button id="hintBtn" class="btn small ghost">Pista</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Acciones</h3>
+        <div class="row">
+          <button id="validateBtn" class="btn ghost">Validar</button>
+          <button id="checkBtn" class="btn">Comprobar</button>
+        </div>
+        <div class="muted" style="margin-top:8px">Conflictos en rojo. Usa teclado o clic en las celdas.</div>
+      </div>
+
+      <div class="panel">
+        <h3>Info</h3>
+        <div class="muted" id="message">Listo — genera un tablero nuevo.</div>
+        <div class="muted" id="timer">Tiempo: 00:00</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
