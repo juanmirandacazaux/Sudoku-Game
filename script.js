@@ -114,7 +114,7 @@ function initGame(difficulty='medium'){
   solution = clone(sol);
   initial = digHoles(solution, difficulty);
   current = clone(initial);
-  pencilMarks = {}; selected = null; messageEl.textContent = 'Nuevo tablero generado';
+  pencilMarks = {}; selected = null; messageEl.textContent = 'New board generated';
   startTimer(); renderBoard();
 }
 
@@ -190,7 +190,7 @@ function moveSelection(dr,dc){
 }
 
 function onNumberInput(num){
-  if(selected === null){ messageEl.textContent = 'Selecciona una celda primero'; return; }
+  if(selected === null){ messageEl.textContent = 'Select a cell first'; return; }
   if(initial[selected] !== 0){ messageEl.textContent = 'No se puede cambiar una celda fija'; return; }
   if(num === 0){ current[selected] = 0; delete pencilMarks[selected]; renderBoard(); return; }
   if(pencil){
